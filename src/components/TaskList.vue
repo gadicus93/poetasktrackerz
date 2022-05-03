@@ -39,6 +39,10 @@
                     <thead>
                     <tr>
                         <th scope="col">Task List</th>
+                        <th scope="col">Task Name</th>
+                        <th scope="col">Act</th>
+                        <th scope="col">Complete?</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -46,7 +50,8 @@
                         <th scope="row">{{task.list_name}}</th>
                         <td>{{task.task_name}}</td>
                         <td>{{task.act_number}}</td>
-                        <td>{{task.complete_flag}}</td>
+                        <td><input type="checkbox" v-model="task.complete_flag"></td>
+                        <!--<td>{{task.complete_flag}}</td>-->
                     </tr>
                     </tbody>
                 </table>

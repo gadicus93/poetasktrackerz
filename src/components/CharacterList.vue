@@ -90,7 +90,7 @@
                     <tbody>
                     <tr v-for = "character in characters" v-bind:key="character">
                         <th scope="row">{{character.username}}</th>
-                        <td>{{character.character_name}}</td>
+                        <td><a href="/task-list">{{character.character_name}}</a></td>
                         <td>{{character.character_class}}</td>
                         <td @click="updateCharacter(character)"><button style="background-color: transparent; padding: 0;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
