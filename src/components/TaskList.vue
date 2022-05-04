@@ -50,7 +50,7 @@
                         <th scope="row">{{task.list_name}}</th>
                         <td>{{task.task_name}}</td>
                         <td>{{task.act_number}}</td>
-                        <td><input type="checkbox" v-model="task.complete_flag"></td>
+                        <td><input type="checkbox" v-model="task.complete_flag" :id="task" @input="updateTasks"></td>
                         <!--<td>{{task.complete_flag}}</td>-->
                     </tr>
                     </tbody>
@@ -114,8 +114,34 @@
                     }
                 });
             },
-            updateTasks(task) {
-                router.push('/tasks-create/' + task.pk);
+            updateTasks() {
+                apiService.updateTasks(this.task).then(response => {
+                if (response.status === 200) {
+                    this.task = response.data;
+                    router.push('/task-list/update');
+                }else{
+                    this.showMsg = "error";
+                }
+                }).catch(error => {
+                if (error.response.status === 401) {
+                    router.push("/auth");
+                }else if (error.response.status === 400) {
+                    this.showMsg = "error";
+                }
+                });
+            },
+            mounted() {
+            if (this.$route.params.pk) {
+                this.pageTitle = "Edit Task";
+                this.isUpdate = true;
+                apiService.getTasks(this.$route.params.pk).then(response => {
+                this.task = response.data;
+                }).catch(error => {
+                if (error.response.status === 401) {
+                    router.push("/auth");
+                }
+                });
+            }
             },
         }
     };
