@@ -4,12 +4,7 @@
         <div class="row">
             <div class="col col-12 align-items-center justify-content-center">
                 <blockquote>
-                    Welcome {{validUserName}}
-                    <footer>
-                    <small>
-                        <em>&mdash;Poe Task Tracker</em>
-                    </small>
-                    </footer>
+                    <img src="..\assets\path-of-exile-logo.png" width="200" height="200">
                 </blockquote>
             </div>
         </div>

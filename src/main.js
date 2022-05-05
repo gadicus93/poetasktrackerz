@@ -5,7 +5,7 @@ import store from './store'
 import axios from 'axios'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
-
+import "../src/assets/css/styles.scss"
 
 
 createApp(App).use(store, axios).use(router).mount('#app')

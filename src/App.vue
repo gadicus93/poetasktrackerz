@@ -1,6 +1,6 @@
 <template>
     <ul class="nav justify-content-end">
-        <div class="EFS">Poe Task Tracker</div>
+        <div class="EFS" style="navtitle">Poe Task Tracker</div>
         <li class="nav-item active">
             <router-link to="/">Home</router-link> |
         </li>
@@ -83,11 +83,11 @@
     }
     #nav {
         padding: 30px;
-        background-color: cadetblue;
+        background-color: rgb(30, 27, 185);
 
         a {
             font-weight: bold;
-            color: #2c3e50;
+            color: #ffffff;
             &.router-link-exact-active {
                 color: #42b983;
             }
@@ -95,17 +95,17 @@
     }
     .nav {
         padding: 1em;
-        background-color: cadetblue;
+        background-color: rgb(30, 27, 185);
 
         li {
             font-weight: bold;
-            color: #2c3e50;
+            color: #ffffff;
         }
 
 
 
         a {
-            color: black;
+            color: rgb(255, 255, 255);
             padding: .5em;
 
 

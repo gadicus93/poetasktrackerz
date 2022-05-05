@@ -4,7 +4,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col col-12 align-items-center justify-content-center">
                 <blockquote>
-                    <h3>Useful Links to help you POE better!</h3>
+                    <img src="..\assets\path-of-exile-logo.png" width="200" height="200">
                 </blockquote>
             </div>
         </div>
