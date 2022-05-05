@@ -117,7 +117,7 @@
             updateTasks() {
                 apiService.updateTasks(this.task).then(response => {
                 if (response.status === 200) {
-                    this.task = response.data;
+                    this.tasks = response.data;
                     router.push('/task-list/update');
                 }else{
                     this.showMsg = "error";

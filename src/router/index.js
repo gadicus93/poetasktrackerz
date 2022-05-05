@@ -5,6 +5,7 @@ import Register from '@/components/Register'
 import CharacterList from '@/components/CharacterList'
 import CharacterCreate from '@/components/CharacterCreate'
 import TaskList from '@/components/TaskList'
+import HelpfulLinks from '@/components/HelpfulLinks'
 
 
 const routes = [
@@ -47,6 +48,11 @@ const routes = [
     path:'/register',
     name: 'Register',
     component: Register
+  },
+  {
+    path:'/links',
+    name: 'Links',
+    component: HelpfulLinks
   }
 ]
 
