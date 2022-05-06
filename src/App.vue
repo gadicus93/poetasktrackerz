@@ -1,4 +1,5 @@
 <template>
+    
     <ul class="nav justify-content-end">
         <div class="EFS" style="navtitle">Poe Task Tracker</div>
         <li class="nav-item active">
