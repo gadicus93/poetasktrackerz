@@ -33,7 +33,7 @@
                        :headers="headers">
                     <thead>
                     <tr>
-                        <th scope="col">Task List</th>
+                        <!--<th scope="col">Task List</th>-->
                         <th scope="col">Task Name</th>
                         <th scope="col">Act</th>
                         <th scope="col">Complete?</th>
@@ -41,11 +41,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for = "task in tasks" v-bind:key="task">
-                        <th scope="row">{{task.list_name}}</th>
+                    <tr v-for="task in tasks" v-bind:key="task">
+                        <!--<th scope="row">{{task.list_name}}</th>-->
                         <td>{{task.task_name}}</td>
                         <td>{{task.act_number}}</td>
-                        <td><input type="checkbox" v-model="task.complete_flag" :id="task" @input="updateTasks"></td>
+                        <td><input type="checkbox" v-model="task.complete_flag" :id="task" @click="updateTasks"></td>
                         <!--<td>{{task.complete_flag}}</td>-->
                     </tr>
                     </tbody>
@@ -109,10 +109,10 @@
                     }
                 });
             },
-            updateTasks() {
+            updateTasks(task) {
                 apiService.updateTasks(this.task).then(response => {
                 if (response.status === 200) {
-                    this.tasks = response.data;
+                    this.task = response.data;
                     router.push('/task-list/update');
                 }else{
                     this.showMsg = "error";
